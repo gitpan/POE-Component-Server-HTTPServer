@@ -8,7 +8,7 @@ use POE::Component::Server::HTTPServer::Handler qw( H_CONT H_FINAL );
 use base 'Exporter';
 our @EXPORT = qw( new_handler );
 
-our $VERSION = '0.9';
+our $VERSION = '0.9.1';
 
 sub new_handler {
   my $package_suffix = shift;

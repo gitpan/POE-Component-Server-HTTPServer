@@ -6,6 +6,12 @@ WriteMakefile(
     'NAME'		=> 'POE::Component::Server::HTTPServer',
     'VERSION_FROM' => 'lib/POE/Component/Server/HTTPServer.pm',
     'PREREQ_PM'		=> {
+			    'POE' => 0,
+			    'MIME::Types' => 1.06,
+			    # these are from libwww-perl (req >=5.76)
+			    'HTTP::Status' => 0,
+			    'URI::Escape' => 0,
+			    'HTTP::Message' => 1.30
 			   }, # e.g., Module::Name => 1.1
     ($] >= 5.005 ?    ## Add these new keywords supported since 5.005
       (AUTHOR     => 'Greg Fast <gdf@speakeasy.net>') : ()),

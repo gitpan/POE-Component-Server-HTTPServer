@@ -1,4 +1,8 @@
-Todo list v0.9:
+Todo list v1.0:
+
+* if-modified header handling for statichandler
+
+* more configurable request logging.
 
 * Better doco
 
@@ -8,3 +12,8 @@ Todo list v0.9:
 
 * ParameterParseHandler: multivalued params
 
+* figure out where socketfactory::ssl is, and how it works
+
+* put $VERSION in all mods
+
+* CGI handler

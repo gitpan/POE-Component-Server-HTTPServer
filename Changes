@@ -1,5 +1,10 @@
 Revision history for Perl extension HTTPServer.
 
+0.9.1 Thu Jul 01 12:00:00 2004
+      - Bugfix: binmode() on plainfiles in StaticHandler (Ran Eilam)
+      - Included prerequisite modules in Makefile.PL
+      - More tests
+
 0.9   Fri Jan 16 16:00:00 2003
       First public release.
 

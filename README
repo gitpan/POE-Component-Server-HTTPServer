@@ -1,5 +1,5 @@
-POE::Component::Server::HTTPServer version 0.9
-==============================================
+POE::Component::Server::HTTPServer version 0.9.1
+================================================
 
 POE::Component::Server::HTTPServer is a POE-based HTTP server component.
 
@@ -14,8 +14,11 @@ To install this module type the following:
 
 DEPENDENCIES
 
-The TemplateHandler request handler requires HTML::Template and
-HTML::Template::HashWrapper.
+ - POE
+ - MIME::Types
+ - libwww-perl
+ - (optional) The TemplateHandler request handler requires HTML::Template
+   and HTML::Template::HashWrapper.
 
 COPYRIGHT AND LICENCE
 

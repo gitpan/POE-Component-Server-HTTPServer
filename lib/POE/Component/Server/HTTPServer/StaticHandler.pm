@@ -57,6 +57,7 @@ sub handle_plainfile {
   my $filepath = shift;
   my $context = shift;
   if ( open(my $in, $filepath) ) {
+    binmode($in);
     local $/ = undef;
     $context->{response}->code( RC_OK );
     my $type = $self->{mimetypes}->mimeTypeOf( $filepath );
