@@ -1,0 +1,9 @@
+Revision history for Perl extension HTTPServer.
+
+0.9   Fri Jan 16 16:00:00 2003
+      First public release.
+
+0.01  Sat Dec 20 23:53:34 2003
+	- original version; created by h2xs 1.22 with options
+		-A -X -n HTTPServer -v 1.0
+

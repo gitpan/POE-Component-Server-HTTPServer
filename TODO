@@ -1,0 +1,10 @@
+Todo list v0.9:
+
+* Better doco
+
+* Better/more thorough tests
+
+* multipart request handling
+
+* ParameterParseHandler: multivalued params
+
