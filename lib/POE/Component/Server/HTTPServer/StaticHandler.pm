@@ -36,7 +36,7 @@ sub handle {
   my $cpath = $context->{contextpath};
   #print "Context path=$cpath\n";
   # scrub path (badly): XXX fix this with file::spec or the like
-  if ( $cpath =~ m[(^|/)..(/|$)] ) {
+  if ( $cpath =~ m[(^|/)\.\.(/|$)] ) {
     warn "Will not serve dangerous path '$cpath'\n"; # should keep silent here
     return H_CONT;
   }

@@ -8,7 +8,7 @@ use POE::Component::Server::HTTPServer::Handler qw( H_CONT H_FINAL );
 use base 'Exporter';
 our @EXPORT = qw( new_handler );
 
-our $VERSION = '0.9.1';
+our $VERSION = '0.9.2';
 
 sub new_handler {
   my $package_suffix = shift;
@@ -85,6 +85,13 @@ sub handlers {
   } else {
     return $self->{_handlers};
   }
+}
+
+# usage: $s->add_handler( '/foo' => new_handler('NotFoundHandler') )
+sub add_handler {
+  my $self = shift;
+  my( $path, $handler ) = @_;
+  push( @{$self->{_handlers}}, $path, $handler );
 }
 
 sub create_server {

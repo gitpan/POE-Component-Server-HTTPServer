@@ -1,6 +1,7 @@
 package POE::Component::Server::HTTPServer::TemplateHandler;
 use strict;
 use HTTP::Status;
+use HTML::Template;
 use HTML::Template::HashWrapper;
 use POE::Component::Server::HTTPServer::Handler;
 use base 'POE::Component::Server::HTTPServer::StaticHandler';

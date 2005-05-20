@@ -1,4 +1,4 @@
-POE::Component::Server::HTTPServer version 0.9.1
+POE::Component::Server::HTTPServer version 0.9.2
 ================================================
 
 POE::Component::Server::HTTPServer is a POE-based HTTP server component.

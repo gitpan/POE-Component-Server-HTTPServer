@@ -15,8 +15,37 @@ ok( defined($h), 'constructor returns defined' );
 isa_ok( $h, 'POE::Component::Server::HTTPServer::Handler' );
 can_ok( $h, 'handle' );
 
-# this set of tests is dumb
+# init: 'root' from $self
+# input: 'contextpath' from context
+# return: H_CONT if no such file/path
+# - file -
+# return: sets code(200), content-type, content on response; FINAL
+#         on file read error, sets error_message on context; CONT
+# - dir -
+# init: index_file, auto_index from $self
+# - index_file exists -
+# return (read index_file)
+# - auto_index true -
+# return: set code(200), content-type, content on response; FINAL
+#         set error_message on dir read error; CONT
+# - else -
+# return: CONT
 
+=pod
+
+ conditions:
+ - file specified invalid (eg, "/fgoo")
+ - file specified and exists and is read
+ - file specified and exists and fail
+ - file specified and not exists
+ - dir specified and exists and is read
+ - dir specified and exists and fail
+ - dir specified and not exists
+
+=cut
+
+
+# this set of tests is dumb
 {
   my $req = HTTP::Request->new();
   $req->uri( "http://www.example.com/bogus.doc" );

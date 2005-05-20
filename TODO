@@ -17,3 +17,6 @@ Todo list v1.0:
 * put $VERSION in all mods
 
 * CGI handler
+
+* figure out how to unblock on long requests?
+
